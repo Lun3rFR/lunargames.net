@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lunar Games</title>
+  <meta name="description" content="Lunar Games: home of Rearmour and more games on the way.">
+  <meta name="theme-color" content="#0b0e1a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23ffb454'/%3E%3Ccircle cx='42' cy='26' r='24' fill='%230b0e1a'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Lunar Games home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="#ffb454"/><circle cx="42" cy="26" r="24" fill="#0b0e1a"/></svg>
+        <span>Lunar Games</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="#games">Games</a>
+        <a href="rearmour.html">Rearmour</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <h1>Games made to be played <em>together</em>.</h1>
+      <p class="lead">Welcome to Lunar Games. Pick a game below to see what's new, make an account and jump in.</p>
+      <div class="actions">
+        <a class="btn" href="rearmour.html">Open Rearmour</a>
+        <a class="btn ghost" href="#games">See all games</a>
+      </div>
+    </section>
+
+    <section class="section wrap" aria-labelledby="feat">
+      <h2 id="feat">Featured</h2>
+      <p class="sub">Our newest world.</p>
+      <a class="featured" href="rearmour.html">
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 64 72"><path d="M32 3 8 12v22c0 17 10 29 24 35 14-6 24-18 24-35V12L32 3Z" fill="#ff8a4c"/><path d="M32 3 8 12v22c0 17 10 29 24 35V3Z" fill="#ffb084"/><path d="M32 18l12 5v10c0 8-5 14-12 18-7-4-12-10-12-18V23l12-5Z" fill="#0a0d16"/><circle cx="32" cy="34" r="5" fill="#38d6c4"/></svg>
+        </div>
+        <div class="info">
+          <span class="chip dev">In development</span>
+          <h2>Rearmour</h2>
+          <p>Build your own rooms, dress up your character and hang out with friends. Log in with one account everywhere.</p>
+          <span class="btn">Go to Rearmour</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="section wrap" id="games" aria-labelledby="all">
+      <h2 id="all">All games</h2>
+      <p class="sub">More are on the way.</p>
+      <div class="grid" id="games-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; <span id="yr">2026</span> Lunar Games</span>
+      <span>lunargame.net</span>
+    </div>
+  </footer>
+
+  <script src="js/games.js"></script>
+  <script src="js/home.js"></script>
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>

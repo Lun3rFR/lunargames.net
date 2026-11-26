@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rearmour</title>
+  <meta name="description" content="Rearmour: build your own rooms, dress up and hang out with friends.">
+  <meta name="theme-color" content="#0a0d16">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 72'%3E%3Cpath d='M32 3 8 12v22c0 17 10 29 24 35 14-6 24-18 24-35V12L32 3Z' fill='%23ff8a4c'/%3E%3Ccircle cx='32' cy='34' r='7' fill='%2338d6c4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="rearmour">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="rearmour.html" aria-label="Rearmour home">
+        <svg viewBox="0 0 64 72" aria-hidden="true"><path d="M32 3 8 12v22c0 17 10 29 24 35 14-6 24-18 24-35V12L32 3Z" fill="#ff8a4c"/><path d="M32 3 8 12v22c0 17 10 29 24 35V3Z" fill="#ffb084"/><path d="M32 18l12 5v10c0 8-5 14-12 18-7-4-12-10-12-18V23l12-5Z" fill="#0a0d16"/><circle cx="32" cy="34" r="5" fill="#38d6c4"/></svg>
+        <span>Rearmour</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Lunar Games</a>
+        <a href="rearmour.html" aria-current="page">Rearmour</a>
+        <a class="opt" href="#account">Account</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="rm-hero wrap">
+      <svg class="shield" viewBox="0 0 64 72" aria-hidden="true"><path d="M32 3 8 12v22c0 17 10 29 24 35 14-6 24-18 24-35V12L32 3Z" fill="#ff8a4c"/><path d="M32 3 8 12v22c0 17 10 29 24 35V3Z" fill="#ffb084"/><path d="M32 18l12 5v10c0 8-5 14-12 18-7-4-12-10-12-18V23l12-5Z" fill="#0a0d16"/><circle cx="32" cy="34" r="5" fill="#38d6c4"/></svg>
+      <h1 class="wordmark">REARMOUR</h1>
+      <p class="lead">Build your own rooms, dress up your character and hang out with friends.</p>
+      <div class="actions">
+        <button class="btn" type="button" data-toast="The Rearmour download isn't out yet. Make an account now and you'll be ready.">Play</button>
+        <a class="btn ghost" href="#account">Create account</a>
+      </div>
+    </section>
+
+    <div class="wrap layout">
+      <section class="screen" aria-label="Rearmour main menu">
+        <div class="titlebar">Rearmour &middot; Main Menu <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="tiles">
+          <button class="tile primary" type="button" data-toast="Quick Play opens in the Rearmour app. Download coming soon.">
+            <span class="ico" aria-hidden="true">&#9654;&#65039;</span>
+            <span class="t"><b>Quick Play</b><br><small>Jump straight into a public room</small></span>
+          </button>
+          <button class="tile" type="button" data-toast="Room browsing is in the Rearmour app. Coming soon.">
+            <span class="ico" aria-hidden="true">&#127968;</span><b>Rooms</b><small>Find a place to hang out</small>
+          </button>
+          <button class="tile" type="button" data-toast="You'll create rooms inside the Rearmour app.">
+            <span class="ico" aria-hidden="true">&#128736;&#65039;</span><b>Create a Room</b><small>Make one of your own</small>
+          </button>
+          <button class="tile" type="button" data-toast="The Locker (your look) lives in the Rearmour app.">
+            <span class="ico" aria-hidden="true">&#128085;</span><b>Locker</b><small>Change how you look</small>
+          </button>
+          <button class="tile" type="button" data-toast="Friends are coming to Rearmour soon.">
+            <span class="ico" aria-hidden="true">&#128101;</span><b>Friends</b><small>See who's online</small>
+          </button>
+          <button class="tile" type="button" data-toast="Settings live in the Rearmour app.">
+            <span class="ico" aria-hidden="true">&#9881;&#65039;</span><b>Settings</b><small>Controls and sound</small>
+          </button>
+          <a class="tile" href="index.html" style="text-decoration:none">
+            <span class="ico" aria-hidden="true">&#127775;</span><b>More Games</b><small>Back to Lunar Games</small>
+          </a>
+        </div>
+        <div class="tip" id="tip"><b>Tip:</b> <span id="tip-text"></span></div>
+      </section>
+
+      <aside class="side">
+        <section class="box" id="account" aria-labelledby="acct-h">
+          <h3 id="acct-h">Your account</h3>
+
+          <div id="signed-out">
+            <div class="tabs" role="tablist" aria-label="Account">
+              <button type="button" role="tab" id="tab-login" aria-selected="true">Log in</button>
+              <button type="button" role="tab" id="tab-register" aria-selected="false">Sign up</button>
+            </div>
+            <form id="auth-form" autocomplete="on">
+              <label>Username
+                <input id="username" name="username" autocomplete="username" minlength="3" maxlength="20" pattern="[A-Za-z0-9_]{3,20}" required>
+              </label>
+              <label>Password
+                <input id="password" name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" required>
+              </label>
+              <button class="btn" type="submit" id="auth-submit">Log in</button>
+              <div class="msg" id="auth-msg" role="status" aria-live="polite"></div>
+            </form>
+            <p style="color:var(--muted);font-size:13px;margin:8px 0 0">Usernames are 3&ndash;20 letters, numbers or underscores. Passwords need 8+ characters.</p>
+          </div>
+
+          <div id="signed-in" class="hidden">
+            <p style="margin:0 0 4px;color:var(--muted)">Signed in as</p>
+            <p style="margin:0 0 14px;font-size:22px;font-weight:800" id="who"></p>
+            <button class="btn ghost" type="button" id="logout">Log out</button>
+          </div>
+        </section>
+
+        <section class="box" aria-labelledby="srv-h">
+          <h3 id="srv-h">Server</h3>
+          <div class="status"><span class="dot" id="srv-dot"></span><span id="srv-text">Checking&hellip;</span></div>
+        </section>
+
+        <section class="box" aria-labelledby="news-h">
+          <h3 id="news-h">News</h3>
+          <ul class="news">
+            <li><time datetime="2026-11-25">Nov 25, 2026</time>We're now called <b>Rearmour</b>. New site, same crew.</li>
+            <li><time datetime="2026-11-25">Nov 25, 2026</time>Accounts are open. Sign up to hold your username.</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; <span id="yr">2026</span> Lunar Games &middot; Rearmour</span>
+      <a href="index.html">lunargame.net</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/rearmour.js"></script>
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
